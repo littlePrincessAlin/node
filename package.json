@@ -1,0 +1,26 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "node实战",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config config/webpack.common.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/littlePrincessAlin/node.git"
+  },
+  "author": "lilin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/littlePrincessAlin/node/issues"
+  },
+  "homepage": "https://github.com/littlePrincessAlin/node#readme",
+  "dependencies": {
+    "webpack": "^5.91.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  }
+}
