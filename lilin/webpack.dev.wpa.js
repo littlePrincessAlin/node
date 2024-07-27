@@ -6,8 +6,10 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
+
 module.exports = {
   mode: "development",
+  // entry: glob.sync(path.join(__dirname, './src/*/index.js'))
   entry: {
     home: path.resolve(__dirname, "Home/Home.jsx"),
     detail: path.resolve(__dirname, "Detail/Detail.jsx")
