@@ -1,0 +1,9 @@
+{
+  "presets": [ // Babel 预设
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [ // 一个plugins对应一个功能
+    // "@babel/proposal-class-properties"
+  ]
+}
