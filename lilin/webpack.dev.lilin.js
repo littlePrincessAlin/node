@@ -17,6 +17,10 @@ module.exports = {
     path: path.resolve(__dirname, "./dist"),
     filename: "main[chunkhash:8].js",
   },
+  externals: {
+    react: 'react',
+    'react-dom': 'react-dom',
+  },
   resolve: {
     extensions: [".js", ".jsx", ".json"],
   },
@@ -32,18 +36,7 @@ module.exports = {
         use: [
           "style-loader",
           "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              plugins: () => [
-                require("autoprefixer")({
-                  // autoprefixer指定需要兼容的浏览器版本
-                  // 兼容到最近的两个版本，版本使用的人数所占的比例，ios7以上
-                  browsers: ["last 2 version", ">1%", "ios7"],
-                }),
-              ],
-            },
-          },
+          "postcss-loader",
         ],
       },
       {
@@ -92,4 +85,5 @@ module.exports = {
     hot: true,
     open: true,
   },
+  devtool: 'source-map'
 };
