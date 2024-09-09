@@ -1,23 +1,15 @@
 // 引入koa-router
 const Router = require('koa-router');
+const controller = require('../controller/index');
 let router = new Router();
-router.post('/', async ctx => {
-  ctx.body = {
-    code: 200,
-    message: '成功获取用户信息',
-  };
+
+router.get('/lilin', ctx => {
+  console.log('11111');
+  ctx.body = 'lilin';
 });
-router.post('/login', async ctx => {
-  ctx.body = {
-    code: 200,
-    message: '成功登陆/注册',
-  };
-});
-router.post('/permission', async ctx => {
-  ctx.body = {
-    code: 200,
-    message: '获取用户权限成功',
-  };
-});
+router.post('/login', controller.login);
+router.post('/register', controller.register);
+router.post('/permission', controller.permission);
+
 // 导出路由
 module.exports = router;
