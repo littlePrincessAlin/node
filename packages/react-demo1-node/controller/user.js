@@ -1,4 +1,8 @@
 const { insertUser } = require('../database/index.js');
+const crypto = require('crypto');
+const id = crypto.randomUUID({ disableEntropyCache: true });
+// const {v4 : uuidv4} = require("uuid")const id = uuidv4()
+// const { nanoid } = require("nanoid")const id = nanoid()
 
 // 鉴权接口
 const permission = ctx => {
@@ -21,8 +25,7 @@ const login = async ctx => {
 
 // 注册用户信息
 const register = ctx => {
-  console.log('register', ctx);
-  insertUser(ctx);
+  insertUser({ mySql: ctx.mySql, data: ctx.request.body });
 };
 
 module.exports = {

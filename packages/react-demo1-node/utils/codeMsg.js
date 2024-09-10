@@ -20,8 +20,12 @@ const CODE_MSG = {
     msg: '请求头异常',
   },
   NO_PERMISSION: {
-    code: 404,
+    code: 403,
     msg: '鉴权未通过',
+  },
+  NO_PERSON: {
+    code: 404,
+    msg: '找不到用户',
   },
   NOT_FOUND: {
     code: 999,
