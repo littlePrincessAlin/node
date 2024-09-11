@@ -1,6 +1,7 @@
 const { insertUser } = require('../database/index.js');
 const crypto = require('crypto');
 const id = crypto.randomUUID({ disableEntropyCache: true });
+const { CODE_MSG } = require('../utils/codeMsg.js');
 // const {v4 : uuidv4} = require("uuid")const id = uuidv4()
 // const { nanoid } = require("nanoid")const id = nanoid()
 
@@ -25,7 +26,8 @@ const login = async ctx => {
 
 // 注册用户信息
 const register = ctx => {
-  insertUser({ mySql: ctx.mySql, data: ctx.request.body });
+  const res = insertUser({ mySql: ctx.mySql, data: ctx.request.body });
+  res ? (ctx.body = CODE_MSG['SUCCESS']) : (ctx.body = CODE_MSG['NOT_FOUND']);
 };
 
 module.exports = {
