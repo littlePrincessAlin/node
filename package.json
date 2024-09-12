@@ -26,6 +26,7 @@
     "crypto": "^1.0.1",
     "crypto-js": "^4.2.0",
     "glob": "^11.0.0",
+    "jsonwebtoken": "^9.0.2",
     "koa-jwt": "^4.0.4",
     "mysql": "^2.18.1",
     "terser-webpack-plugin": "^5.3.10",

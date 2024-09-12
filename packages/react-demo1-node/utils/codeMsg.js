@@ -5,11 +5,11 @@ const CODE_MSG = {
   },
   FAILED_REQUEST_DATA: {
     code: 2,
-    msg: '参数异常',
+    msg: '前端参数异常',
   },
   FAILED_RESPONSE_DATA: {
     code: 3,
-    msg: '暂无数据',
+    msg: '后端数据异常',
   },
   DATA_BASE_CONNECT_ERROR: {
     code: 4,
@@ -20,12 +20,20 @@ const CODE_MSG = {
     msg: '请求头异常',
   },
   NO_PERMISSION: {
-    code: 403,
-    msg: '鉴权未通过',
+    code: 500,
+    msg: '后端鉴权未通过',
   },
   NO_PERSON: {
-    code: 404,
+    code: 400,
     msg: '找不到用户',
+  },
+  TOKEN_ERROR: {
+    code: 401,
+    msg: '找不到用户',
+  },
+  NO_PATH: {
+    code: 404,
+    msg: '找不到接口',
   },
   NOT_FOUND: {
     code: 999,
